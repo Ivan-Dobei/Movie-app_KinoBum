@@ -1,0 +1,20 @@
+.myInput{
+   width: 370px;
+   height: 40px;
+   padding: 0 40px 0 15px;
+   background-color: #333;
+   border-radius: 5px;
+   color: #fff;
+   margin-right: 20px;
+   font-size: 14px;
+}
+.myInput__form{
+   display: flex;
+   align-items: center;
+}
+.myInput__btn{
+   width: 40px;
+   height: 40px;
+   background-color: inherit;
+   background-image: url('../../../assets/img/search.svg');
+}

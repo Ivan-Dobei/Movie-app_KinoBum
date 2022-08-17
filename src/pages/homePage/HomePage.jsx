@@ -1,20 +1,9 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { getMovie } from '../../actions/MovieAction';
+import React from 'react'
+import MovieList from '../../components/movieList/MovieList';
 import MainButton from '../../components/UI/mainButton/MainButton';
 import cl from './HomePage.module.css'
 
 const HomePage = () => {
-
-   const items = useSelector(state => state.movie.items);
-   const dispatch = useDispatch();
-
-   useEffect(() => {
-      dispatch(getMovie());
-   }, [])
-
-   console.log(items);
-
 
    return (
       <div className={cl.homePage}>
@@ -25,6 +14,7 @@ const HomePage = () => {
                   <MainButton>Learn more</MainButton>
                </div>
             </div>
+            <MovieList />
          </div>
       </div>
    )

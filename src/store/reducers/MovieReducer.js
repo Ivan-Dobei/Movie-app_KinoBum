@@ -11,7 +11,7 @@ export const MovieReducer = (state = initialState, action) => {
      case SET_MOVIE:
       return {
          ...state,
-         items: action.payload
+         items: action.payload.results
       }
 
       default:

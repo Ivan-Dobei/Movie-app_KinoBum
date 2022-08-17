@@ -1,40 +1,32 @@
-import axios from 'axios';
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { getMovie } from '../../actions/MovieAction';
+import MainButton from '../../components/UI/mainButton/MainButton';
+import cl from './HomePage.module.css'
 
 const HomePage = () => {
 
-   const _apiBase = "https://api.themoviedb.org/3";
-   const _apiKey = "8a889d86688e82341a3066e97fac71f0";
-   const _newMovie = "/movie/latest";
+   const items = useSelector(state => state.movie.items);
+   const dispatch = useDispatch();
 
-   const getResources = async url => {
-      let res = await fetch(url);
-      if (!res.ok) {
-         throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-      }
-      return await res.json();
-   }
+   useEffect(() => {
+      dispatch(getMovie());
+   }, [])
 
-   const getNewMovies = async () => {
-      return await getResources(`${_apiBase}${_newMovie}?api_key=${_apiKey}&language=en-US`)
-   }
-
-   const checkApi = () => {
-      axios
-        .get(`${_apiBase}${_newMovie}?api_key=${_apiKey}&language=en-US`)
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    };
+   console.log(items);
 
 
    return (
-      <>
-         <button onClick={checkApi} >Click</button>
-      </>
+      <div className={cl.homePage}>
+         <div className={cl.container}>
+            <div className={cl.hero}>
+               <div className={cl.hero__container}>
+                  <h2 className={cl.hero__title}>Doctor Strange: In the Multiverse of Madness</h2>
+                  <MainButton>Learn more</MainButton>
+               </div>
+            </div>
+         </div>
+      </div>
    )
 }
 

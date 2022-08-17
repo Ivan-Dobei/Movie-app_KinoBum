@@ -1,0 +1,28 @@
+.hero{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   width: 100%;
+   height: 600px;
+   background-image: url('../../assets/img/kinobum-bg.jpg');
+   background-color: rgba(0, 0, 0, 0.8);
+   background-position: center top;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.hero__container{
+   max-width: 1230px;
+   width: 100%;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.hero__title{
+   display: block;
+   max-width: 430px;
+   font-size: 40px;
+   line-height: 50px;
+   font-weight: 700;
+   color: #fff;
+   margin-bottom: 50px;
+}

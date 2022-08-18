@@ -21,7 +21,6 @@ const HomePage = () => {
                </div>
                <div className={cl.movieList__bottom}>
                   <MovieList />
-                  <MainButton>Show more</MainButton>
                </div>
             </div>
          </div>

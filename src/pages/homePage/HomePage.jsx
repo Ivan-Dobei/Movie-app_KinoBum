@@ -10,11 +10,20 @@ const HomePage = () => {
          <div className={cl.container}>
             <div className={cl.hero}>
                <div className={cl.hero__container}>
-                  <h2 className={cl.hero__title}>Doctor Strange: In the Multiverse of Madness</h2>
+                  <h1 className={cl.hero__title}>Doctor Strange: In the Multiverse of Madness</h1>
                   <MainButton>Learn more</MainButton>
                </div>
             </div>
-            <MovieList />
+            <div className={cl.movieList}>
+               <div className={cl.movieList__top}>
+                  <h2 className={cl.movieList__title}>Top rated movies</h2>
+                  <MainButton>See all</MainButton>
+               </div>
+               <div className={cl.movieList__bottom}>
+                  <MovieList />
+                  <MainButton>Show more</MainButton>
+               </div>
+            </div>
          </div>
       </div>
    )

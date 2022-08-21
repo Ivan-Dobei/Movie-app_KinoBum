@@ -1,0 +1,35 @@
+.container{
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 30px;
+}
+.content{
+   display: flex;
+}
+.content__left{
+   margin-right: 40px;
+}
+.img{
+   position: relative;
+   width: 300px;
+   height: auto;
+   border-radius: 5px;
+   overflow: hidden;
+   -o-object-fit: cover;
+   object-fit: cover;
+   aspect-ratio: 2/3;
+   background-color: rgb(48, 47, 47);
+}
+.title{
+   font-weight: 800;
+   font-size: 40px;
+   line-height: 48px;
+   max-width: 650px;
+   margin-bottom: 30px;
+}
+.subtitle{
+   font-weight: 800;
+   font-size: 24px;
+   line-height: 30px;
+   margin: 20px 0;
+}

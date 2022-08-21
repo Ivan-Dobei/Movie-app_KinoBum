@@ -27,15 +27,10 @@ export const MovieReducer = (state = initialState, action) => {
             page: state.page + 1
          }
       case GET_ID:
-         return {
-            ...state,
-            id: action.payload
-         }
+         return { ...state, id: action.payload }
+
       case GET_MOVIE:
-         return {
-            ...state,
-            item: action.payload
-         }
+         return { ...state, item: action.payload }
 
       default:
          return state;

@@ -21,6 +21,7 @@ const MoviePage = () => {
       overview
    } = movie;
    const imgUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
+   const vote = Math.floor(vote_average * 10) / 10;
 
 
    return (
@@ -29,7 +30,7 @@ const MoviePage = () => {
             <div className={cl.content}>
                <div className={cl.content__left}>
                   <img src={imgUrl} className={cl.img} />
-                  <div>{vote_average}</div>
+                  <div className={cl.vote}>{vote}</div>
                </div>
                <div className={cl.content__right}>
                   <h2 className={cl.title}>{title}</h2>
@@ -59,7 +60,10 @@ const MoviePage = () => {
                   </ul>
                </div>
             </div>
-            <p>{overview}</p>
+            <div className={cl.overview}>
+               <h3 className={cl.overview__title}>Overview</h3>
+               <p className={cl.overview__text}>{overview}</p>
+            </div>
          </div>
       </div>
    )

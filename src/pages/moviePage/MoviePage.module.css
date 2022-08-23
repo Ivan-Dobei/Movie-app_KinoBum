@@ -1,3 +1,6 @@
+.moivePage{
+   padding: 50px 0;
+}
 .container{
    max-width: 1230px;
    margin: 0 auto;
@@ -5,9 +8,14 @@
 }
 .content{
    display: flex;
+   margin-bottom: 30px;
 }
 .content__left{
    margin-right: 40px;
+   position: relative;
+}
+.content__right{
+   width: 100%;
 }
 .img{
    position: relative;
@@ -31,5 +39,53 @@
    font-weight: 800;
    font-size: 24px;
    line-height: 30px;
-   margin: 20px 0;
+   margin: 30px 0 20px 0;
+}
+.vote{
+   position: absolute;
+   z-index: 4;
+   display: flex;
+   align-items: center;
+   top: 10px;
+   left: 10px;
+   color: #fff;
+   padding: 2px 8px;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: center;
+   background-color: rgb(32, 147, 32);
+   border-radius: 5px;
+}
+.item{
+   display: flex;
+   margin-bottom: 15px;
+}
+.caption{
+   display: block;
+   font-size: 15px;
+   line-height: 18px;
+   color: rgba(0,0,0,.5);
+   flex: 0 0 150px;
+}
+.value{
+   display: inline-block;
+   max-width: 100%;
+   font-size: 15px;
+   line-height: 18px;
+}
+.overview{
+   max-width: 700px;
+}
+.overview__title{
+   font-size: 20px;
+   font-weight: 600;
+   color: rgb(37, 37, 37);
+   margin-bottom: 15px;
+}
+.overview__text{
+   margin: 0;
+   font-size: 15px;
+   line-height: 23px;
+   color: rgba(0,0,0,.5);
 }

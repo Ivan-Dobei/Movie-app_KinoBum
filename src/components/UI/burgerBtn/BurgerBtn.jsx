@@ -1,7 +1,7 @@
 import React from 'react'
 import cl from './BurgerBtn.module.css'
 
-const BurgerBtn = ({ props }) => {
+const BurgerBtn = ({ ...props }) => {
    return (
       <button
          {...props}

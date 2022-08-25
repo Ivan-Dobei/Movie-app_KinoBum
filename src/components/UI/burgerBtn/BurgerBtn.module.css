@@ -1,10 +1,11 @@
 .burgerBtn{
    display: flex;
    align-items: center;
-   width: 30px;
+   width: 25px;
    height: 18px;
    background-color: transparent;
    position: relative;
+   margin-right: 40px;
 }
 .burgerLine{
    display: inline-block;

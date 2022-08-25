@@ -13,6 +13,8 @@
    display: block;
    max-width: 222px;
    border-radius: 5px;
+   min-height: 190px;
+   width: 100%;
    overflow: hidden;
    background-color: #000;
    cursor: pointer;

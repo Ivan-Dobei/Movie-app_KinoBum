@@ -6,6 +6,7 @@ import MovieListPage from './pages/movieListPage/MovieListPage'
 import cl from './App.module.css'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import FavoritePage from './pages/favoritePage/FavoritePage'
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
             <Routes>
                <Route path='/' element={<HomePage />} />
                <Route path='movies' element={<MovieListPage />} />
+               <Route path='favorites' element={<FavoritePage />} />
                <Route path='movie:id' element={<MoviePage />} />
             </Routes>
             <Footer />

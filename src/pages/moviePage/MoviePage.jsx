@@ -23,6 +23,14 @@ const MoviePage = () => {
    const imgUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
    const vote = Math.floor(vote_average * 10) / 10;
 
+   const checkMovieContent = item => {
+      if ( item === '' || item === 0){
+         return '---';
+      } else {
+         return item;
+      }
+   }
+
 
    return (
       <div className={cl.moivePage}>
@@ -39,30 +47,30 @@ const MoviePage = () => {
                   <ul className={cl.list}>
                      <li className={cl.item}>
                         <span className={cl.caption}>Tagline</span>
-                        <span className={cl.value}>{tagline}</span>
+                        <span className={cl.value}>{checkMovieContent(tagline)}</span>
                      </li>
                      <li className={cl.item}>
                         <span className={cl.caption}>Release date</span>
-                        <span className={cl.value}>{release_date}</span>
+                        <span className={cl.value}>{checkMovieContent(release_date)}</span>
                      </li>
                      <li className={cl.item}>
-                        <span className={cl.caption}>Revenues</span>
-                        <span className={cl.value}>{revenue}$</span>
+                        <span className={cl.caption}>Revenues ($)</span>
+                        <span className={cl.value}>{checkMovieContent(revenue)}</span>
                      </li>
                      <li className={cl.item}>
-                        <span className={cl.caption}>Time</span>
-                        <span className={cl.value}>{runtime} min</span>
+                        <span className={cl.caption}>Time (min)</span>
+                        <span className={cl.value}>{checkMovieContent(runtime)}</span>
                      </li>
                      <li className={cl.item}>
                         <span className={cl.caption}>Number of votes</span>
-                        <span className={cl.value}>{vote_count}</span>
+                        <span className={cl.value}>{checkMovieContent(vote_count)}</span>
                      </li>
                   </ul>
                </div>
             </div>
             <div className={cl.overview}>
                <h3 className={cl.overview__title}>Overview</h3>
-               <p className={cl.overview__text}>{overview}</p>
+               <p className={cl.overview__text}>{checkMovieContent(overview)}</p>
             </div>
          </div>
       </div>
